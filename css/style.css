@@ -20,6 +20,7 @@ body {
     padding: 0;
     line-height: 1.5;
     font-size: 16x;
+    font-family: 'poppins', sans-serif;
 }
 
 ::before,
@@ -48,12 +49,13 @@ ul {
     align-items: center;
     width: 270px;
     background: var(--bg-black-100);
+    border-right: 1px solid var(--bg-black-50);
     position: fixed;
     top: 0;
     left: 0;
     padding: 30px;
     height: 100%;
-    z-index: 2;
+    z-index: 10;
 }
 
 .aside .logo {
@@ -61,4 +63,65 @@ ul {
     top: 50px;
     font-size: 30px;
     text-transform: capitalize;
+}
+
+.aside .logo a {
+    color: var(--text-black-900);
+    font-weight: 700;
+    padding: 15px 20px;
+    font-size: 20px;
+    letter-spacing: 5px;
+    position: relative;
+}
+
+.aside .logo a span {
+    font-family: 'Clicker Script', cursive;
+    font-size: 40px;
+}
+
+.aside .logo a::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-bottom: 5px solid var(--skin-color);
+    border-left: 5px solid var(--skin-color);
+    bottom: 0;
+    left: 0;
+}
+
+.aside .logo a::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-top: 5px solid var(--skin-color);
+    border-right: 5px solid var(--skin-color);
+    top: 0;
+    right: 10;
+}
+
+.aside .nav {
+    margin-top: 50px;
+}
+
+.aside .nav li {
+    margin-bottom: 20px;
+    display: block;
+}
+
+.aside .nav li a {
+    font-size: 16px;
+    font-weight: 600;
+    border-bottom: 1px solid var(--bg-black-50);
+    color: var(--text-black-900);
+    padding: 5px 15px
+}
+
+.aside .nav li a .active {
+    color: var(--skin-color)
+}
+
+.aside .nav li a i {
+    margin-right: 15px;
 }

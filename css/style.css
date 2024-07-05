@@ -94,6 +94,7 @@ ul {
 
 .aside-part {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     background: var(--bg-black-100);
@@ -104,6 +105,26 @@ ul {
     padding: 60px;
     height: 100%;
     z-index: 10;
+}
+
+.social-links-nav ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.social-links-nav {
+    flex: 2;
+}
+
+.social-links-nav ul {
+    justify-content: center;
+}
+
+.social-links-nav ul li {
+    padding: 0 6px;
 }
 
 .aside .logo {

@@ -15,9 +15,14 @@
     --text-black-700: #504e70;
 }
 
-.dark-theme {
-    --primary-color: #000106;
-    --secondary-color: #fff
+body.dark {
+    background: url("../assets/images/pf-dark-bg.png");
+}
+
+.dark-mode {
+    --blackcolor: rgb(216, 216, 216);
+    --whitecolor: #111;
+    --graycolor: rgb(109, 109, 109);
 }
 
 body {
@@ -125,6 +130,33 @@ ul {
 
 .social-links-nav ul li {
     padding: 0 6px;
+}
+
+.theme-mode-container {
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    position: fixed;
+    top: 50%;
+    display: flex;
+    justify-content: center;
+    z-index: 999;
+}
+
+.theme-mode-container>div {
+    display: flex;
+    cursor: pointer;
+    padding: 20px 10px;
+    margin-left: 10px;
+    background-color: var(--maincolor);
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 5px 5px 0;
+}
+
+.theme-mode-container>div i {
+    font-size: 24px;
+    color: #fff;
 }
 
 .aside .logo {

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/skins/color-1.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <title>joselyne Portifolio</title>
     <link rel="stylesheet" href="css/style-switcher.css">
     <link rel="stylesheet" href="css/skins/color-1.css" class="alternate-style" title="color-1" disabled>
@@ -89,7 +89,7 @@
                             <a href="#contact" class="btn hire-me">Hire me</a>
                         </div>
                         <div class="home-image padding">
-                            <img src="images/my-profile.jpg" alt="">
+                            <img src="/assets/images/my-profile.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -338,28 +338,28 @@
                 <div class="portifolio-item padding">
                     <div class="portifolio-item-inner shadow-dark">
                         <div class="portifolio-img">
-                            <img src="images/rsu.jpeg" alt="">
+                            <img src="assets/" alt="">
                         </div>
                     </div>
                 </div>
                 <div class="portifolio-item padding">
                     <div class="portifolio-item-inner shadow-dark">
                         <div class="portifolio-img">
-                            <img src="images/rsu.jpeg" alt="">
+                            <img src="assets/images/rsu.jpeg" alt="">
                         </div>
                     </div>
                 </div>
                 <div class="portifolio-item padding">
                     <div class="portifolio-item-inner shadow-dark">
                         <div class="portifolio-img">
-                            <img src="images/rsu.jpeg" alt="">
+                            <img src="assets/images/rsu.jpeg" alt="">
                         </div>
                     </div>
                 </div>
                 <div class="portifolio-item padding">
                     <div class="portifolio-item-inner shadow-dark">
                         <div class="portifolio-img">
-                            <img src="images/rsu.jpeg" alt="">
+                            <img src="assets/images/rsu.jpeg" alt="">
                         </div>
                     </div>
                 </div>
@@ -395,52 +395,54 @@
             <h3 class="contact-title padding">SEND ME AN EMAIL</h3>
             <h4 class="contact-sub-title padding">I'm VERY RESPONSIVE TO MESSAGES</h4>
             <div class="row">
-                <div class="contact-form padding">
-                    <div class="row">
-                        <div class="form-item col-6 padding">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Name">
+                <form id="contactForm" onsubmit="sendEmail(); return false;">
+                    <div class="contact-form padding">
+                        <div class="row">
+                            <div class="form-item col-6 padding">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="name" placeholder="Name" required>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-item col-6 padding">
-                            <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Email">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-item col-12 padding">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Subject">
-                            </div>
-                        </div>
-                        <div class="form-item col-12 padding">
-                            <div class="form-group">
-                                <textarea name="" class="form-control" id="" cols="30" rows="10">Message</textarea>
+                            <div class="form-item col-6 padding">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="email" placeholder="Email" required>
+                                </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-item col-12 padding">
-                                <button type="submit" class="btn">Send Message</button>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="subject" placeholder="Subject" required>
+                                </div>
+                            </div>
+                            <div class="form-item col-12 padding">
+                                <div class="form-group">
+                                    <textarea class="form-control" id="message" cols="30" rows="10" placeholder="Message" required></textarea>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-item col-12 padding">
+                                    <button type="submit" class="btn">Send Message</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </form>
+
             </div>
+        </div>
+        </div>
         </div>
         </div>
     </section>
     </div>
     </div>
     </div>
-    <div class="style-switcher">
-        <div class="style-switcher-toggler s-icon">
-            <i class="fas fa-cog fa-spin" id="icon"></i>
+    <div class="theme-mode-container">
+        <div class="dark-toggle " title="toggle theme mode">
+            <i class="fa fa-moon" aria-hidden="true"></i>
         </div>
-        <div class="day-night s-icon">
-            <i class="fas fa-moon"></i>
-        </div>
-        <h4>Theme Colors</h4>
+        <!-- <h4>Theme Colors</h4>
         <div class="colors">
             <span class="color-1" onclick="setActiveStyle('color-1')"></span>
             <span class="color-2" onclick="setActiveStyle('color-2')"></span>
@@ -448,12 +450,13 @@
             <span class="color-4" onclick="setActiveStyle('color-4')"></span>
             <span class="color-5" onclick="setActiveStyle('color-5')"></span>
 
-        </div>
+        </div> -->
     </div>
     <script src="js/script.js"></script>
     <script src="js/style-switcher.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
         AOS.init();
     </script>
@@ -463,6 +466,7 @@
             document.body.classList.toggle("dark-theme")
         }
     </script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
 
 </html>

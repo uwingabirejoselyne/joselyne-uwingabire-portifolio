@@ -21,22 +21,24 @@ $(".dark-toggle").click(function () {
 
   //sending an email
 
-  const form = document.querySelector('form')
-  function sendEmail(){
-    Email.send({
-      Host : "smtp.elasticemail.com",
-      Username : "smtp@gmail.com",
-      Password : "6E482E045B272FABF47EDEA85FB023E32F018BB01AC3071DAF17C5475D9D4047ECDF13ECED5680F9F07DDA63595B9FCA",
-      To : 'uwingajoselyne@gmail.com',
-      From : "smtp@gmail.com",
-      Subject : "This is the subject",
-      Body : "And this is the body"
-  }).then(
-    message => alert(message)
-  );
-  }
-
-  form.addEventListener('submit',(e)=>{
+  document.getElementById('contactForm').addEventListener('submit', function (e) {
     e.preventDefault();
     sendEmail();
-  })
+});
+
+function sendEmail() {
+    Email.send({
+        Host: "smtp.gmail.com",
+        Username: "uwingajoselyne@gmail.com",
+        Password: "ygen uovh awtd kjal",  
+        To: 'uwingajoselyne@gmail.com',
+        From: document.getElementById('email').value,
+        Subject: document.getElementById('subject').value,
+        Body: `Name: ${document.getElementById('name').value} <br> 
+               Email: ${document.getElementById('email').value} <br> 
+               Subject: ${document.getElementById('subject').value} <br> 
+               Message: ${document.getElementById('message').value}`
+    }).then(
+        message => alert(message)
+    );
+}

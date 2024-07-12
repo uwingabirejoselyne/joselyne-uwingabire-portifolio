@@ -371,24 +371,30 @@
             <h3 class="contact-title padding">SEND ME AN EMAIL</h3>
             <h4 class="contact-sub-title padding">I'm VERY RESPONSIVE TO MESSAGES</h4>
             <div class="row">
-                <form id="contactForm" onsubmit="sendEmail(); return false;">
+                <form id="contactForm" onsubmit="sendEmail(); return false;" method="POST">
                     <div class="contact-form padding">
                         <div class="row">
                             <div class="form-item col-6 padding">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="name" placeholder="Name" required>
+                                    <input type="text" class="form-control" id="names" placeholder="Name" required>
+                                    <span id="names-error">!</span>
                                 </div>
                             </div>
                             <div class="form-item col-6 padding">
                                 <div class="form-group">
                                     <input type="email" class="form-control" id="email" placeholder="Email" required>
+                                    <span id="email-error">!</span>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
+                            <div class="message-error">
+                                Whoops!!! your message is what we expected most
+                            </div>
                             <div class="form-item col-12 padding">
                                 <div class="form-group">
                                     <input type="text" class="form-control" id="subject" placeholder="Subject" required>
+                                    <span id="subject-error">!</span>
                                 </div>
                             </div>
                             <div class="form-item col-12 padding">
@@ -419,7 +425,10 @@
             <i class="fa fa-moon" aria-hidden="true"></i>
         </div>
     </div>
-    <script type="module" src="js/script.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="./js/firebase_configs.js"></script>
+    <script src="js/script.js"></script>
     <script src="js/style-switcher.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
@@ -433,10 +442,6 @@
             document.body.classList.toggle("dark-theme")
         }
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/mailgun@0.5.0/mailgun.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-    <script src="./js/firebase_configs.js"></script>
 </body>
 
 </html>

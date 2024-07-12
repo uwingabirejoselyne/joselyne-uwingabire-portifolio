@@ -27,12 +27,26 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
 });
 
 function sendEmail() {
-  const names = document.getElementById('names').value;
-  const email = document.getElementById('email').value;
-  const subject = document.getElementById('subject').value;
-  const message = document.getElementById('message').value;
+  // Get form values
+  var name = document.getElementById('names').value;
+  var email = document.getElementById('email').value;
+  var subject = document.getElementById('subject').value;
+  var message = document.getElementById('message').value;
 
-document.querySelectorAll("form span").forEach((el)=>{
-  el.style.display ="none"
-})
+  // Save form data to Firebase Firestore
+  db.collection('contacts').add({
+    name: name,
+    email: email,
+    subject: subject,
+    message: message,
+    timestamp: firebase.firestore.FieldValue.serverTimestamp()
+  })
+  .then(function() {
+    alert('Message sent successfully');
+    document.getElementById('contactForm').reset();
+  })
+  .catch(function(error) {
+    console.error('Error adding document: ', error);
+    alert('Error sending message');
+  });
 }

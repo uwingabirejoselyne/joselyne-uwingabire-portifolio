@@ -418,17 +418,8 @@
         <div class="dark-toggle " title="toggle theme mode">
             <i class="fa fa-moon" aria-hidden="true"></i>
         </div>
-        <!-- <h4>Theme Colors</h4>
-        <div class="colors">
-            <span class="color-1" onclick="setActiveStyle('color-1')"></span>
-            <span class="color-2" onclick="setActiveStyle('color-2')"></span>
-            <span class="color-3" onclick="setActiveStyle('color-3')"></span>
-            <span class="color-4" onclick="setActiveStyle('color-4')"></span>
-            <span class="color-5" onclick="setActiveStyle('color-5')"></span>
-
-        </div> -->
     </div>
-    <script src="js/script.js"></script>
+    <script type="module" src="js/script.js"></script>
     <script src="js/style-switcher.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
@@ -442,7 +433,10 @@
             document.body.classList.toggle("dark-theme")
         }
     </script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mailgun@0.5.0/mailgun.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="./js/firebase_configs.js"></script>
 </body>
 
 </html>

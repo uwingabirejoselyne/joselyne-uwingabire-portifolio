@@ -267,7 +267,6 @@ h3.my-professional {
 
 .home .home-image {
     flex: 0 0 40%;
-    max-width: 40%;
     text-align: center;
     position: relative
 }
@@ -279,7 +278,7 @@ h3.my-professional {
     width: 80px;
     border-bottom: 10px solid var(--skin-color);
     border-right: 10px solid var(--skin-color);
-    right: 20x;
+    right: 15px;
     bottom: -40px;
 }
 
@@ -290,7 +289,7 @@ h3.my-professional {
     width: 80px;
     border-top: 10px solid var(--skin-color);
     border-left: 10px solid var(--skin-color);
-    left: -20px;
+    left: -15px;
     top: -40px;
 }
 

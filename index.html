@@ -329,6 +329,27 @@
             </div>
         </div>
     </section>
+     <section class="calendar section w-full" id="calendar" data-aos="zoom-in">
+            <div class="container">
+                <div class="row">
+                    <div class="section-title padding">
+                        <h2>My Calendar</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="calendar-container padding" style="text-align:center;">
+                        <iframe 
+                            src="https://calendar.google.com/calendar/embed?src=uwingajoselyne%40gmail.com&ctz=Africa%2FKigali"
+                            style="border:0;" 
+                            width="100%" 
+                            height="600" 
+                            frameborder="0" 
+                            scrolling="no">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
     <section class="contact section" id="contact" data-aos="zoom-in">
         <div class="container">
             <div class="row">
@@ -358,39 +379,42 @@
             <h3 class="contact-title padding">SEND ME AN EMAIL</h3>
             <h4 class="contact-sub-title padding">I'm VERY RESPONSIVE TO MESSAGES</h4>
             <div class="row">
-                <form id="contactForm" onsubmit="sendEmail(); return false;" method="POST">
-                    <div class="contact-form padding">
-                        <div class="row">
-                            <div class="form-item col-6 padding">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="names" placeholder="Name" required>
-                                </div>
-                            </div>
-                            <div class="form-item col-6 padding">
-                                <div class="form-group">
-                                    <input type="email" class="form-control" id="email" placeholder="Email" required>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-item col-12 padding">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject" required>
-                                </div>
-                            </div>
-                            <div class="form-item col-12 padding">
-                                <div class="form-group">
-                                    <textarea class="form-control" id="message" cols="30" rows="10" placeholder="Message" required></textarea>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="form-item col-12 padding">
-                                    <button type="submit" class="btn">Send Message</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </form>
+                <form name="contact" method="POST" data-netlify="true">
+  <input type="hidden" name="form-name" value="contact">
+
+  <div class="contact-form padding">
+    <div class="row">
+      <div class="form-item col-6 padding">
+        <div class="form-group">
+          <input type="text" class="form-control" name="name" placeholder="Name" required>
+        </div>
+      </div>
+      <div class="form-item col-6 padding">
+        <div class="form-group">
+          <input type="email" class="form-control" name="email" placeholder="Email" required>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-item col-12 padding">
+        <div class="form-group">
+          <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+        </div>
+      </div>
+      <div class="form-item col-12 padding">
+        <div class="form-group">
+          <textarea class="form-control" name="message" cols="30" rows="10" placeholder="Message" required></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-item col-12 padding">
+          <button type="submit" class="btn">Send Message</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
 
             </div>
         </div>
@@ -423,6 +447,7 @@
             document.body.classList.toggle("dark-theme")
         }
     </script>
+    <script src="//code.tidio.co/1tfbfnife2biaccowwyx2vwhfdrrpxfp.js" async></script>
 </body>
 
 </html>
